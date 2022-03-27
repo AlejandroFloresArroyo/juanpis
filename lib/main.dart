@@ -146,15 +146,6 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                           ),
                           Icon(
-                            Icons.attach_file,
-                            color: Theme.of(context)
-                                .textTheme
-                                .bodyText1!
-                                .color!
-                                .withOpacity(0.64),
-                          ),
-                          SizedBox(width: 20.0 / 4),
-                          Icon(
                             Icons.camera_alt_outlined,
                             color: Theme.of(context)
                                 .textTheme
@@ -162,6 +153,15 @@ class _MyHomePageState extends State<MyHomePage> {
                                 .color!
                                 .withOpacity(0.64),
                           ),
+                          SizedBox(width: 20.0 / 4),
+                          IconButton(
+                              onPressed: () => setState(() {
+                                    myController.text = "Grabando...";
+                                  }),
+                              icon: Icon(
+                                Icons.mic,
+                                color: Colors.red,
+                              ))
                         ],
                       ),
                     ),
